@@ -116,7 +116,8 @@ CDVDInputStream* CDVDFactoryInputStream::CreateInputStream(IVideoPlayer* pPlayer
   else if(file.substr(0, 6) == "pvr://")
     return new CDVDInputStreamPVRManager(pPlayer, fileitem);
 #ifdef HAVE_LIBBLURAY
-  else if (fileitem.IsType(".bdmv") || fileitem.IsType(".mpls") || file.substr(0, 7) == "bluray:")
+  else if (fileitem.IsType(".bdmv") || fileitem.IsType(".mpls") || file.substr(0, 7) == "bluray:"
+          || fileitem.IsType(".bdm") || fileitem.IsType(".mpl"))
     return new CDVDInputStreamBluray(pPlayer, fileitem);
 #endif
   else if(file.substr(0, 6) == "rtp://"
