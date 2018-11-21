@@ -879,6 +879,31 @@ namespace VIDEO
             break;
         }
       }
+      else if (StringUtils::EqualsNoCase(strFileX, "INDEX.BDM")||StringUtils::EqualsNoCase(strFileX, "index.bdmv"))
+      {
+        int j=x+1;
+        while (j < items.Size())
+        {
+          std::string strPathY, strFileY;
+          URIUtils::Split(items[j]->GetPath(), strPathY, strFileY);
+          if (StringUtils::StartsWithNoCase(strPathY, strPathX))
+            items.Remove(j);
+          else
+            j++;
+        }
+        j=x-1;
+        while (j >=0)
+        {
+          std::string strPathY, strFileY;
+          URIUtils::Split(items[j]->GetPath(), strPathY, strFileY);
+          if (StringUtils::StartsWithNoCase(strPathY, strPathX))
+          {
+            items.Remove(j);
+            x--;
+          }
+          j--;
+        }
+      }
       x++;
     }
 
