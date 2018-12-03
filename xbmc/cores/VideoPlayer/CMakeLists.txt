@@ -32,6 +32,7 @@ set(HEADERS DVDAudio.h
             VideoPlayerRadioRDS.h
             VideoPlayerSubtitle.h
             VideoPlayerTeletext.h
-            VideoPlayerVideo.h)
+            VideoPlayerVideo.h
+            Interface/StreamInfo.h)
 
 core_add_library(VideoPlayer)

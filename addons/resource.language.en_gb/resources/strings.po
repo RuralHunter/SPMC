@@ -6515,7 +6515,7 @@ msgstr ""
 #: addons/skin.estuary/1080i/Custom_1106_VideoOSDSettings.xml
 #: addons/skin.estuary/1080i/Variables.xml
 msgctxt "#13396"
-msgid "Audio and subtitle settings"
+msgid "Audio settings"
 msgstr ""
 
 msgctxt "#13397"
@@ -14730,7 +14730,17 @@ msgctxt "#24151"
 msgid "Add-on migration in progress - please wait"
 msgstr ""
 
-#empty strings from id 24152 to 24990
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24152"
+msgid "Subtitle settings"
+msgstr ""
+
+#: xbmc/dialogs/GUIDialogSubtitles.cpp
+msgctxt "#24153"
+msgid "Download subtitle..."
+msgstr ""
+
+#empty strings from id 24154 to 24990
 
 #. Used as error message in add-on browser when add-on repository data could not be downloaded
 #: xbmc/filesystem/AddonsDirectory.cpp

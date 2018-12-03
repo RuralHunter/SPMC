@@ -27,6 +27,7 @@
 #include "guilib/GUIProgressControl.h"
 #include "guilib/GUILabelControl.h"
 #include "video/dialogs/GUIDialogVideoOSD.h"
+#include "video/dialogs/GUIDialogSubtitleSettings.h"
 #include "guilib/GUIWindowManager.h"
 #include "input/Key.h"
 #include "video/dialogs/GUIDialogFullScreenInfo.h"
@@ -187,6 +188,13 @@ bool CGUIWindowFullScreen::OnAction(const CAction &action)
     }
     return true;
     break;
+  case ACTION_BROWSE_SUBTITLE:
+    {
+      std::string path = CGUIDialogSubtitleSettings::BrowseForSubtitle();
+      if (!path.empty())
+        g_application.m_pPlayer->AddSubtitle(path);
+      return true;
+    }
   default:
       break;
   }
